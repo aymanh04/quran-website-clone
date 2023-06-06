@@ -1,14 +1,8 @@
-const mongoose = require('mongoose')
+var mongoose = require('mongoose');
 
-async function main(){
-  await mongoose.connect;
-}
 mongoose
-  .connect('mongodb://127.0.0.1:27017/cinema', { useNewUrlParser: true })
-  .catch(e => {
-    console.error('Connection error', e.message)
-  })
+	.connect('mongodb://mongo:27017/mydb', { useNewUrlParser: true })
+	 .then(() => console.log('MongoDB Connected'))
+	 .catch(err => console.log(err));
 
 const db = mongoose.connection
-
-module.exports = db
