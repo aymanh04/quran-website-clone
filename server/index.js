@@ -16,7 +16,7 @@ app.use(bodyParser.json())
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World my!')
+    res.send('Hello World!')
 })
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
