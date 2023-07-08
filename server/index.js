@@ -2,6 +2,7 @@ const express = require('express')
 const dotenv = require('dotenv')
 dotenv.config();
 const connectDb = require('./config/db')
+const loadSurahs = require('./config/loadSurahs')
 const bodyParser = require('body-parser')
 const cors = require('cors')
 
@@ -16,7 +17,8 @@ app.use(bodyParser.json())
 
 
 app.get('/', (req, res) => {
-    res.send('Hello World my!')
+    loadSurahs();
+    res.send('Hello World!')
 })
 
 app.listen(apiPort, () => console.log(`Server running on port ${apiPort}`))
