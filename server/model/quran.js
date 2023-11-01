@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
-const quranSchema = new Schema(
+const surahSchema = new Schema(
     {
         name: {
             type: String,
@@ -13,4 +13,5 @@ const quranSchema = new Schema(
     }
 )
 
-module.exports = mongoose.model('Quran', quranSchema)
+const Surah = mongoose.model('Surah', surahSchema)
+module.exports = Surah
