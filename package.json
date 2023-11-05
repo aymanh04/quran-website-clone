@@ -5,12 +5,19 @@
   "scripts": {
     "server": "cd server && npm i && docker-compose up --build",
     "client": "cd ui && npm start",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "devStart": "nodemon index.js"
   },
   "author": "",
   "license": "MIT",
   "homepage": "",
   "dependencies": {
-    "concurrently": "^4.1.0"
+    "concurrently": "^4.1.0",
+    "mongoose": "^7.6.1"
+  },
+  "main": "index.js",
+  "keywords": [],
+  "devDependencies": {
+    "nodemon": "^3.0.1"
   }
 }

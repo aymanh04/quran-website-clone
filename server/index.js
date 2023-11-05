@@ -4,9 +4,9 @@ dotenv.config();
 const connectDb = require('./config/db')
 const bodyParser = require('body-parser')
 const cors = require('cors')
-
+const mongoose = require('mongoose')
 const app = express();
-
+mongoose.connect("mongodb://localhost/testdb")
 connectDb();
 const apiPort = process.env.NODE_LOCAL_PORT || 8082;
 
